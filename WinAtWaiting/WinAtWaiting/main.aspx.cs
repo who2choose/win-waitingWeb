@@ -70,13 +70,14 @@ namespace WinAtWaiting
 
         private string dothedivthing(string taskname, string taskduration, string taskprivacy, string taskpriority, string taskdescription)
         {
-            return string.Format("<div class=\"pricing-grid\"><div class=\"basic-plan\"><h3>{0}</h3><p></p></div><ul><li>{1} minutes</li><li>priority {3}</li><li>{2}</li><li>{4}</li></ul><div class=\"sign-up\"><a runat=\"server\"  onserverclick=\"buttonDeleteTask\" class=\"hvr-sweep-to-right button\">Delete</a></div></div>", taskname, taskduration, taskprivacy, taskpriority, taskdescription);
+            return string.Format("<form runat=\"server\"><div class=\"pricing-grid\"><div class=\"basic-plan\"><h3>{0}</h3><p></p></div><ul><li>{1} minutes</li><li>priority {3}</li><li>{2}</li><li>{4}</li></ul><p></p></div></form>", taskname, taskduration, taskprivacy, taskpriority, taskdescription);
         }
 
         //begin button calls
         protected void buttonDeleteTask(object sender, EventArgs e) 
         {
-
+            Session["firstname"] = (sender.ToString());
+            Page_Load(sender, e);
         }
 
         char[] invalidcharacters = new char[] { '\'', '\"', '(', ')', '<', '>', '\\', '/' };

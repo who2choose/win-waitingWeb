@@ -158,7 +158,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     <asp:ListItem>10</asp:ListItem>
                                 </asp:DropDownList>
                         </p>
-                        <input runat="server" ID="addtask_description" type="text" maxlength="200" placeholder="Additional Information" />
+                        <input runat="server" id="addtask_description" type="text" maxlength="200" placeholder="Additional Information" />
                         <br />
                         <a runat="server" onserverclick="buttonAddTask" class="hvr-sweep-to-right button">ADD</a>
                     </form>
