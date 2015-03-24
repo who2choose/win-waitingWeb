@@ -127,10 +127,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <div class="addtask-info">
                 <div class="setline-info">
                     <form runat="server">
-                        <input runat="server" id="Text1" type="text" placeholder="Name" />
+                        <input runat="server" id="addtask_name" type="text" placeholder="Name" />
                         <p>
                             Duration:
-                                <asp:DropDownList runat="server" CssClass="ddl">
+                                <asp:DropDownList runat="server" CssClass="ddl" ID="addtask_duration">
                                     <asp:ListItem>1</asp:ListItem>
                                     <asp:ListItem>5</asp:ListItem>
                                     <asp:ListItem>10</asp:ListItem>
@@ -141,11 +141,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         </p>
                         <p>
                             Private:
-                                <asp:CheckBox runat="server" ID="cbx" CssClass="cbx" Checked="true" />
+                                <asp:CheckBox runat="server" ID="addtask_privacy" CssClass="cbx" Checked="true" />
                         </p>
                         <p>
                             Priority:
-                                <asp:DropDownList runat="server" CssClass="ddl">
+                                <asp:DropDownList runat="server" CssClass="ddl" ID="addtask_priority">
                                     <asp:ListItem>1</asp:ListItem>
                                     <asp:ListItem>2</asp:ListItem>
                                     <asp:ListItem>3</asp:ListItem>
@@ -158,9 +158,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     <asp:ListItem>10</asp:ListItem>
                                 </asp:DropDownList>
                         </p>
-                        <input runat="server" id="Text2" type="text" maxlength="200" placeholder="Additional Information" />
+                        <input runat="server" ID="addtask_description" type="text" maxlength="200" placeholder="Additional Information" />
                         <br />
-                        <a runat="server" onserverclick="Page_Load" class="hvr-sweep-to-right button">ADD</a>
+                        <a runat="server" onserverclick="buttonAddTask" class="hvr-sweep-to-right button">ADD</a>
                     </form>
                 </div>
             </div>

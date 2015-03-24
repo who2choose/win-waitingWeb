@@ -31,31 +31,49 @@ namespace WinAtWaiting {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl thisistomod;
         
         /// <summary>
-        /// Text1 control.
+        /// addtask_name control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText Text1;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText addtask_name;
         
         /// <summary>
-        /// cbx control.
+        /// addtask_duration control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox cbx;
+        protected global::System.Web.UI.WebControls.DropDownList addtask_duration;
         
         /// <summary>
-        /// Text2 control.
+        /// addtask_privacy control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText Text2;
+        protected global::System.Web.UI.WebControls.CheckBox addtask_privacy;
+        
+        /// <summary>
+        /// addtask_priority control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList addtask_priority;
+        
+        /// <summary>
+        /// addtask_description control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText addtask_description;
         
         /// <summary>
         /// todolist_textarea1 control.

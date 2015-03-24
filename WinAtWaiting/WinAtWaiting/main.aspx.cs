@@ -33,6 +33,7 @@ namespace WinAtWaiting
 
         private void loadTaskTiles()
         {
+            thisistomod.InnerHtml = "";
             DataTable tasks = loadDatabaseIntoTable(string.Format("SELECT name, duration, priority, privacy, description FROM tasks WHERE user_id={0}", Session["user_id"]));
             foreach (DataRow row in tasks.Rows)
             {
@@ -70,7 +71,10 @@ namespace WinAtWaiting
         }
 
         //begin button calls
-        protected void buttonDeleteTask(object sender, EventArgs e) { }
+        protected void buttonDeleteTask(object sender, EventArgs e) 
+        {
+
+        }
 
         char[] invalidcharacters = new char[] { '\'', '\"', '(', ')', '<', '>', '\\', '/' };
         protected void buttonSaveTodo(object sender, EventArgs e)
@@ -82,6 +86,13 @@ namespace WinAtWaiting
             string t5 = (todolist_textarea5.Value.ToString());//.Trim(invalidcharacters);
             string command = string.Format("UPDATE todo SET text1='{0}', text2='{1}', text3='{2}', text4='{3}', text5='{4}' WHERE user_id={5}", t1, t2, t3, t4, t5, Session["user_id"].ToString());
             exacuteCommand(command);
+        }
+
+        protected void buttonAddTask(object sender, EventArgs e)
+        {
+            string command = string.Format("INSERT INTO {0} VALUES ('{1}', {2}, {3}, {4}, {5}, '{6}')", "tasks", addtask_name.Value.ToString(), Session["user_id"].ToString(), addtask_duration.SelectedItem.ToString(), addtask_priority.SelectedItem.ToString(), (addtask_privacy.Checked ? 0 : 1), addtask_description.Value.ToString());
+            exacuteCommand(command);
+            Page_Load(sender, e);
         }
 
         //begin database management
